@@ -1,0 +1,72 @@
+---
+title: "YFI analyses"
+author: "Nathan Byer (using data from J. A. Hillmer)"
+date: "6/22/2022"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(width=300)
+```
+
+```{r,warning=FALSE,echo=FALSE,message=FALSE}
+library(tidyverse)
+library(lme4)
+library(car)
+library(emmeans)
+library(ggplot2)
+library(Hmisc)
+library(emmeans)
+
+```
+
+# summarize the data
+
+```{r}
+setwd("U:/DataAnalysis/YellowFlagIris")
+YFIdata<-read.csv("YFIdata_cleaned.csv",header=T)
+YFIdata_NAomit<-YFIdata[!rowSums(is.na(YFIdata)) > ncol(YFIdata)*.2,]
+n_occur <- data.frame(table(YFIdata_NAomit$plot_number_tag_number))
+n_occur_2<-n_occur[n_occur$Freq==2,]
+length(unique(YFIdata_NAomit$plot_number_tag_number))
+YFIdata_NAomit_onlypaired<-YFIdata_NAomit[YFIdata_NAomit$plot_number_tag_number %in% n_occur_2$Var1,]
+YFIdata_NAomit_onlypaired$treatment_type<-factor(YFIdata_NAomit_onlypaired$treatment_type,levels = c("No treatment","Cut and herbicide","Cut and tarp"))
+YFIdata_NAomit_onlypaired$Period<-factor(YFIdata_NAomit_onlypaired$Period,levels = c("Pre","Post"))
+```
+
+# models
+```{r}
+numflowstalk<-lmer(number_of_flower_stalks_in_clump~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
+numleaves<-lmer(number_of_leaves_in_clump~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
+
+Anova(numflowstalk)
+Anova(numleaves)
+emmeans(numflowstalk, list(pairwise ~ treatment_type*Period), adjust = "tukey")
+emmeans(numleaves, list(pairwise ~ treatment_type*Period), adjust = "tukey")
+```
+
+# plotting
+
+```{r}
+ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=number_of_leaves_in_clump, fill=Period)) + 
+  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
+  theme_classic(base_size=18)+scale_y_continuous(expand=c(0,0))+xlab("Treatment type")+ylab("# of leaves")
+
+ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=number_of_flower_stalks_in_clump, fill=Period)) + 
+  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
+  theme_classic(base_size=18)+xlab("Treatment type")+ylab("# of flowers")
+
+ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=width_in_feet, fill=Period)) + 
+  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
+  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Clump width")
+
+ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=width_in_inches_feet_above, fill=Period)) + 
+  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
+  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Clump width in inches feet above")
+```
