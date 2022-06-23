@@ -14,7 +14,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-options(width=300)
+options(width=400)
 ```
 
 ```{r,warning=FALSE,echo=FALSE,message=FALSE}
