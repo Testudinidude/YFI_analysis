@@ -30,49 +30,91 @@ library(emmeans)
 
 # summarize the data
 
+First, we will process the input dataset to facilitate downstream analysis. Basically, the code below reads in a cleaned version of the dataset (I removed any plots without post-treatment monitoring), removes rows if they have more than 20% missing data, summarize the number of plots with paired samples after this, and remove plots without paired samples. After doing so, we now have a neat and tidy 3 x 2 experimental design (3 treatments and 2 survey periods). In terms of sample sizes, things are a bit unbalanced, with 8 cut and herbicide, 17 cut and tarp, and 13 no treatment plots. This is not necessarily a problem - our models should be able to accommodate this with Type II or III sums of squares. Since we would expect there to be an interaction between our two main effects (after all, our treatments should be pretty noticeably different pre vs. post!), we should use Type III. 
+
 ```{r}
-setwd("U:/DataAnalysis/YellowFlagIris")
 YFIdata<-read.csv("YFIdata_cleaned.csv",header=T)
-YFIdata_NAomit<-YFIdata[!rowSums(is.na(YFIdata)) > ncol(YFIdata)*.2,]
+YFIdata_NAomit<-YFIdata[!(rowSums(is.na(YFIdata)) > ncol(YFIdata)*.2),]
 n_occur <- data.frame(table(YFIdata_NAomit$plot_number_tag_number))
 n_occur_2<-n_occur[n_occur$Freq==2,]
-length(unique(YFIdata_NAomit$plot_number_tag_number))
 YFIdata_NAomit_onlypaired<-YFIdata_NAomit[YFIdata_NAomit$plot_number_tag_number %in% n_occur_2$Var1,]
 YFIdata_NAomit_onlypaired$treatment_type<-factor(YFIdata_NAomit_onlypaired$treatment_type,levels = c("No treatment","Cut and herbicide","Cut and tarp"))
 YFIdata_NAomit_onlypaired$Period<-factor(YFIdata_NAomit_onlypaired$Period,levels = c("Pre","Post"))
+summary(factor(paste0(YFIdata_NAomit_onlypaired$treatment_type,YFIdata_NAomit_onlypaired$Period)))
 ```
 
 # models
+
+The fact that one of these factors is a repeated measure - that is, reflects measurements taken on the same plot through time - does mean that we will have to account for this pseudoreplication using a **mixed model design** - basically, including both factors of interest (*fixed effects*) and potential nuisance variables (*random effects*). In this case, I am using fairly simple mixed models with a random intercept for each plot, but there are other ways to do this too. Ben Bolker has an excellent guide on this, which is well worth reading/skimming: https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html.
+
+So, first we run the models themselves:
+
 ```{r}
 numflowstalk<-lmer(number_of_flower_stalks_in_clump~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
 numleaves<-lmer(number_of_leaves_in_clump~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
-
-Anova(numflowstalk)
-Anova(numleaves)
-emmeans(numflowstalk, list(pairwise ~ treatment_type*Period), adjust = "tukey")
-emmeans(numleaves, list(pairwise ~ treatment_type*Period), adjust = "tukey")
+widthft<-lmer(width_in_feet~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
+widthabove<-lmer(width_in_inches_feet_above~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
+clumplength<-lmer(clump_length_in_feet_~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
+clumplengthabove<-lmer(clump_length_inches_feet_above~treatment_type*Period+(1|plot_number_tag_number),YFIdata_NAomit_onlypaired)
 ```
+
+Then, we test for significance (again, using Type III sums of squares):
+```{r}
+Anova(numflowstalk,type=3)
+Anova(numleaves,type=3)
+Anova(widthft,type=3)
+Anova(widthabove,type=3)
+Anova(clumplength,type=3)
+Anova(clumplengthabove,type=3)
+```
+If we just focus on the interactive terms here (since those should reflect the simultaneous change in response covariates through time between treatment groups), number of leaves and width in feet have significant interaction terms. 
+
+
+We can explore these covariates in more detail by using *post hoc* tests to compare between treatment x period combinations. We should focus our interpretations on the No treatment pre vs. post, Cut and herbicide pre vs. post, and Cut and tarp pre vs. post comparisons. 
+
+```{r}
+emmeans(numleaves, list(pairwise ~ treatment_type*Period), adjust = "tukey")
+emmeans(widthft, list(pairwise ~ treatment_type*Period), adjust = "tukey")
+
+```
+
+Lots of information to digest here! But to summarize -  both the cut and herbicide and cut and tarp treatments significantly reduced the number of leaves between treatments. In contrast, only the cut and tarp treatment appeared to reduce width. 
 
 # plotting
 
+To visualize these patterns, I have provided some barplots below for each of the six covariates described above. 
+
 ```{r}
-ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=number_of_leaves_in_clump, fill=Period)) + 
-  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
-  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
-  theme_classic(base_size=18)+scale_y_continuous(expand=c(0,0))+xlab("Treatment type")+ylab("# of leaves")
 
 ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=number_of_flower_stalks_in_clump, fill=Period)) + 
   stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
   stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
   theme_classic(base_size=18)+xlab("Treatment type")+ylab("# of flowers")
 
+ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=number_of_leaves_in_clump, fill=Period)) + 
+  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
+  theme_classic(base_size=18)+scale_y_continuous(expand=c(0,0))+xlab("Treatment type")+ylab("# of leaves")
+
 ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=width_in_feet, fill=Period)) + 
   stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
   stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
-  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Clump width")
+  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Width in feet")
 
 ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=width_in_inches_feet_above, fill=Period)) + 
   stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
   stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
-  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Clump width in inches feet above")
+  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Width in inches feet above")
+
+ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=clump_length_in_feet_, fill=Period)) + 
+  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
+  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Clump length in feet")
+
+ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=clump_length_inches_feet_above, fill=Period)) + 
+  stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", position = position_dodge(width = 0.90), width = 0.2)+
+  theme_classic(base_size=18)+xlab("Treatment type")+ylab("Clump length in inches feet above")
 ```
+
+This does make it clear that there may be some true effects on the # of flowering stalks - but the amount of variability in those estimates between plots appears to dampen the statistical significance of this effect. Regardless, I think it is safe to say that Cut and Tarp is about as effective as Cut and Herbicide, but appears to do some things that Cut and Herbicide treatments do not (namely, changing width).
