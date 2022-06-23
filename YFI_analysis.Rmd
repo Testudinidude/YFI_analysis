@@ -84,7 +84,7 @@ Lots of information to digest here! But to summarize -  both the cut and herbici
 
 To visualize these patterns, I have provided some barplots below for each of the six covariates described above. 
 
-```{r}
+```{r,warning=FALSE,message=FALSE,echo=FALSE}
 
 ggplot(data=YFIdata_NAomit_onlypaired, aes(x=treatment_type, y=number_of_flower_stalks_in_clump, fill=Period)) + 
   stat_summary(fun.y = mean, geom = "bar", position = "dodge") + 
