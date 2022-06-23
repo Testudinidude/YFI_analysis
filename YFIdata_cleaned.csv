@@ -1,0 +1,99 @@
+updated_at,created_by,updated_by,Year collected,plot_number_tag_number,Period,treatment_type,available_light,is_substrate_underwater,is_next_clump_within_6_feet,clump_length_in_feet_,clump_length_inches_feet_above,width_in_feet,width_in_inches_feet_above,number_of_leaves_in_clump,number_of_flower_stalks_in_clump
+2020-06-30 17:50:54 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,4,Pre,No treatment,Partial shade,0,1,2,3,0,11,13,1
+2021-06-01 18:52:55 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,4,Post,No treatment,Partial shade,1,1,2,4,,2,31,1
+2020-06-30 18:24:10 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,5,Pre,Cut and herbicide,,,,,,,,,
+2021-06-02 19:49:52 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,5,Post,Cut and herbicide,Partial shade,0,0,,6,,1,3,
+2020-07-14 16:55:45 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,7,Pre,Cut and herbicide,Shade,0,1,1,2,0,11,7,
+2021-06-02 20:02:06 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,7,Post,No treatment,Partial shade,0,1,,,,,,
+2020-06-30 16:31:55 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,26,Pre,Cut and herbicide,Shade,0,1,2,2,1,11,58,0
+2021-06-01 19:15:46 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,26,Post,Cut and herbicide,Partial shade,1,1,0,6,1,1,22,0
+2020-07-20 19:07:16 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,43,Pre,Cut and tarp,Partial shade,0,0,2,8,2,6,62,12
+2021-06-02 19:54:34 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,43,Post,Cut and tarp,Partial shade,0,0,1,10,2,6,19,
+2020-06-15 15:54:59 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,55,Pre,Cut and herbicide,Sun,1,1,1,0,0,8,4,2
+2021-06-01 19:08:16 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,55,Post,Cut and herbicide,Partial shade,1,1,0,0,0,0,0,0
+2020-06-30 18:27:59 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,64,Pre,Cut and herbicide,,,,,,,,,
+2021-06-01 19:19:14 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,64,Post,Cut and herbicide,Partial shade,1,1,2,4,2,10,29,0
+2020-06-30 18:23:17 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,66,Pre,No treatment,Shade,,,,,,,,
+2021-06-02 19:38:42 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,66,Post,No treatment,Partial shade,1,0,2,5,2,1,12,3
+2020-06-30 18:51:53 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,68,Pre,No treatment,Shade,0,1,1,6,1,4,7,0
+2021-06-02 19:59:04 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,68,Post,No treatment,Partial shade,0,1,2,8,1,6,9,2
+2020-06-11 19:10:51 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,359,Pre,No treatment,Shade,0,0,1,8,1,4,12,1
+2021-06-02 19:43:53 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,359,Post,No treatment,Partial shade,0,0,1,10,1,4,6,4
+2020-07-20 19:04:19 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,364,Pre,Cut and tarp,Partial shade,0,0,2,4,1,9,11,0
+2021-06-02 19:39:55 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,364,Post,Cut and tarp,Partial shade,0,0,2,,,1,12,2
+2020-06-08 18:44:50 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,366,Pre,No treatment,Sun,0,1,2,1,1,11,32,11
+2021-06-01 15:13:59 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,366,Post,No treatment,Sun,0,1,2,0,2,3,28,20
+2020-06-08 17:40:51 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,367,Pre,Cut and herbicide,Sun,0,1,1,10,1,5,,
+2021-06-01 15:11:13 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,367,Post,Cut and herbicide,Sun,0,1,0,2,0,1,1,0
+2020-06-08 20:06:22 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,369,Pre,Cut and herbicide,Sun,0,1,3,11,3,9,87,55
+2021-06-02 20:01:01 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,369,Post,Cut and herbicide,Sun,0,1,1,11,2,11,19,
+2020-06-08 17:31:13 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,372,Pre,No treatment,Sun,0,1,1,10,2,6,40,22
+2021-06-01 18:18:03 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,372,Post,No treatment,Sun,0,0,3,0,3,2,49,6
+2020-06-08 19:59:22 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,376,Pre,Cut and herbicide,Sun,0,1,7,11,4,10,170,35
+2021-06-02 19:44:50 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,376,Post,Cut and herbicide,Sun,0,1,3,8,3,,35,5
+2020-06-08 19:02:16 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,385,Pre,No treatment,Shade,1,1,2,13,1,0,16,4
+2021-06-02 20:03:43 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,385,Post,No treatment,Sun,1,0,2,,1,6,5,4
+2020-06-08 18:29:00 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,404,Pre,Cut and herbicide,Partial shade,1,1,1,6,1,6,14,4
+2021-06-02 19:35:12 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,404,Post,Cut and herbicide,Partial shade,1,1,1,4,,8,3,1
+2020-06-08 18:24:05 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,469,Pre,No treatment,Partial shade,1,1,1,1,0,7,4,2
+2021-06-02 19:34:07 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,469,Post,No treatment,Partial shade,1,0,1,9,1,,6,4
+2020-06-08 18:19:38 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,481,Pre,No treatment,Sun,1,0,1,2,0,6,4,2
+2021-06-02 19:55:52 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,481,Post,No treatment,Partial shade,1,0,1,11,1,6,3,3
+2020-06-08 18:20:19 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,484,Pre,Cut and herbicide,Shade,0,0,0,10,0,6,6,3
+2021-06-02 19:53:49 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,484,Post,Cut and herbicide,Shade,0,0,,9,,6,3,
+2020-06-11 19:33:26 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,697,Pre,No treatment,Partial shade,0,0,1,8,0,0,6,0
+2021-06-02 19:36:49 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,697,Post,No treatment,Partial shade,0,0,1,2,1,3,9,1
+2020-06-08 20:01:38 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,705,Pre,No treatment,Sun,0,1,2,1,2,0,36,16
+2021-06-02 19:46:54 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,705,Post,No treatment,Sun,0,1,2,10,2,6,20,4
+2020-06-04 14:24:51 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,724,Pre,Cut and tarp,Shade,1,1,5,7,4,8,,17
+2021-06-03 20:00:53 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,724,Post,Cut and tarp,Shade,1,1,,,,,0,0
+2020-06-04 16:21:08 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,726,Pre,Cut and tarp,Shade,0,1,3,0,2,7,21,6
+2021-06-01 17:59:21 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,726,Post,Cut and tarp,Shade,0,1,0,10,0,10,3,0
+2020-06-04 16:20:48 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,728,Pre,Cut and tarp,Sun,1,1,2,4,2,4,53,15
+2021-06-01 15:00:04 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,728,Post,Cut and tarp,Sun,0,1,0,0,0,0,0,0
+2020-06-04 16:21:02 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,729,Pre,Cut and tarp,Shade,0,0,2,10,2,5,160,61
+2021-06-03 17:23:12 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,729,Post,Cut and tarp,Sun,0,1,3,0,0,1,2,0
+2020-06-04 16:20:22 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,732,Pre,Cut and tarp,Partial shade,1,1,1,10,1,3,6,3
+2021-06-02 20:10:13 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,732,Post,Cut and tarp,Partial shade,1,0,,,,,,
+2020-06-04 16:19:50 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,746,Pre,Cut and tarp,Sun,1,0,5,2,2,2,32,20
+2021-06-02 19:31:58 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,746,Post,Cut and tarp,Sun,1,0,5,,,4,11,1
+2020-06-04 16:25:08 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,747,Pre,Cut and tarp,Partial shade,1,0,4,10,4,7,53,17
+2021-06-02 20:05:52 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,747,Post,Cut and tarp,Sun,1,0,1,8,1,10,12,7
+2020-06-05 19:30:23 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,748,Pre,Cut and tarp,Sun,0,1,2,0,1,6,22,5
+2021-06-02 20:09:46 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,748,Post,Cut and tarp,Sun,0,0,,6,,6,6,
+2020-06-05 19:43:12 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,749,Pre,Cut and tarp,Partial shade,0,1,2,3,2,0,47,9
+2021-06-02 20:02:51 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,749,Post,Cut and tarp,Sun,0,1,,,,,,
+2020-06-05 19:23:06 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,750,Pre,Cut and tarp,Sun,0,1,4,4,2,8,85,20
+2021-06-02 20:06:37 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,750,Post,Cut and tarp,Sun,0,1,2,,,5,2,
+2020-06-05 18:43:36 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,751,Pre,Cut and tarp,Sun,0,1,7,1,4,3,162,32
+2021-06-02 19:57:03 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,751,Post,Cut and tarp,Sun,0,1,,,,,,
+2020-07-20 19:01:07 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,752,Pre,Cut and tarp,Partial shade,0,0,1,6,1,0,9,2
+2021-06-02 20:09:05 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,752,Post,Cut and tarp,Partial shade,0,0,,,,,,
+2020-07-20 19:03:27 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,753,Pre,Cut and tarp,Shade,0,0,3,6,1,4,35,1
+2021-06-02 20:07:44 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,753,Post,Cut and tarp,Partial shade,0,0,5,4,2,9,9,
+2020-07-20 19:05:55 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,754,Pre,Cut and tarp,Partial shade,0,1,2,0,2,0,13,4
+2021-06-02 19:52:58 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,754,Post,Cut and tarp,Sun,1,0,,2,,1,2,
+2020-07-20 19:05:19 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,756,Pre,Cut and tarp,Sun,0,0,1,6,0,8,9,3
+2021-06-02 19:51:00 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,756,Post,Cut and tarp,Sun,1,,1,10,,7,7,
+2020-07-20 19:00:26 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,757,Pre,Cut and tarp,Shade,0,1,1,6,1,6,,7
+2021-06-02 19:45:48 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,757,Post,Cut and tarp,Partial shade,0,1,2,1,,6,7,5
+2020-06-30 15:18:02 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,759,Pre,Cut and tarp,Sun,1,1,2,1,2,9,15,9
+2021-06-01 19:26:00 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,759,Post,Cut and tarp,Sun,1,1,12,8,0,11,3,4
+2020-06-30 16:17:05 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,761,Pre,Cut and tarp,Sun,1,1,2,8,1,8,33,3
+2021-06-01 18:48:08 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,761,Post,Cut and tarp,Partial shade,1,1,0,0,0,0,0,0
+2020-06-30 15:59:57 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,762,Pre,Cut and tarp,Partial shade,1,1,3,6,2,4,65,6
+2021-06-01 18:45:05 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,762,Post,Cut and tarp,Partial shade,1,1,,,,,0,0
+2020-06-30 15:38:08 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,763,Pre,Cut and tarp,Shade,1,1,3,2,3,7,63,1
+2021-06-01 19:02:57 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,763,Post,Cut and tarp,Partial shade,1,1,0,0,0,0,0,0
+2020-06-15 15:53:46 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,765,Pre,Cut and tarp,Sun,1,1,5,0,4,1,134,0
+2021-06-02 19:36:07 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,765,Post,Cut and tarp,Sun,1,0,,,,,,
+2020-06-12 20:01:38 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,766,Pre,Cut and tarp,Partial shade,0,0,2,3,1,0,17,1
+2021-06-02 19:52:10 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,766,Post,Cut and tarp,Partial shade,0,1,,6,,2,2,
+2020-06-08 18:19:43 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,959,Pre,No treatment,Partial shade,0,0,4,9,3,0,66,9
+2021-06-01 17:42:48 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,959,Post,No treatment,Shade,0,,5,0,2,8,51,10
+2021-06-01 14:46:54 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,978,Pre,Cut and herbicide,Shade,0,1,9,2,5,11,139,17
+2021-06-01 14:51:10 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,978,Post,Cut and herbicide,Shade,1,1,7,6,6,0,41,5
+2020-06-08 20:15:22 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,999,Pre,No treatment,Sun,0,1,1,9,1,8,27,9
+2021-06-02 20:04:40 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,999,Post,No treatment,Sun,0,1,,2,,1,2,
+2020-06-08 15:46:56 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2020,1000,Pre,No treatment,Shade,1,1,5,2,5,3,,6
+2021-06-01 14:50:04 UTC,jah@clevelandmetroparks.com,jah@clevelandmetroparks.com,2021,1000,Post,No treatment,Shade,1,,5,7,6,3,88,14
